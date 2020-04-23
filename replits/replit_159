@@ -1,0 +1,43 @@
+package replits;
+/*
+c_profits gets the buyPrice(int) and sellPrice(int) and determines if there was a profit or loss.
+it returns a string value that can be "profit","loss","no loss"
+for example:c_profis(100,1500)
+returns : "profit"
+c_profis(20,5)
+returns : "loss"
+c_profis(100,100)
+returns : "no loss"
+ */
+
+import java.util.Scanner;
+class main{
+    public static void main(String[] arg){
+//public static String c_profits (int buyPrice,int sellPrice){
+        //your code here
+        Scanner scan=new Scanner(System.in);
+        System.out.println("a");
+        int a=scan.nextInt();
+        System.out.println("b");
+        int b=scan.nextInt();
+        String sonuc=c_profits(a,b);
+
+        System.out.println(sonuc);
+        }
+    public static String c_profits (int buyPrice,int sellPrice) {
+
+        String result="";
+
+        if (buyPrice > sellPrice) {
+            result="profit";
+        } else if (buyPrice < sellPrice) {
+            result="loss";
+        } else {
+            result="no loss";
+        }
+
+        return result;
+
+    }
+
+        }

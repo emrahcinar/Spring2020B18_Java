@@ -1,0 +1,40 @@
+package replits;
+
+import java.util.Scanner;
+
+/*
+max function gets two ints, x and y.
+x is the test case, y is what we test against.
+if  x is bigger then y return y
+in any other case return x.
+for example:
+max(1,10)
+returns 1
+max(11,5)
+returns 5
+ */
+class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int x = scan.nextInt();
+        int y = scan.nextInt();
+        int maximum = max(x, y);
+        System.out.println(maximum);
+
+    }
+
+    public static int max(int x, int y) {
+
+        int result = 1;
+
+        if (x > y) {
+            result = y;
+        } else {
+            result = x;
+        }
+
+        return result;
+
+    }
+
+}
