@@ -2,7 +2,7 @@ package replits;
 
 import java.util.Scanner;
 
-public class replit_47 {
+public class _147_addtoArray {
     public static void main(String[] args) {
 
 

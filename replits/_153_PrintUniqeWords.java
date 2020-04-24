@@ -11,7 +11,7 @@ python
  */
 import java.util.Scanner;
 
-public class _153_ {
+public class _153_PrintUniqeWords {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int size = scan.nextInt();
@@ -24,7 +24,7 @@ public class _153_ {
 
     public static void printUniqueWords(String[] words) {
         //WRITE YOUR CODE HERE
-       
+
         for (String eachArr : words) {
             int count = 0;
             for (String eacharr2 : words) {

@@ -1,6 +1,6 @@
 package replits;
 import java.util.*;
-public class _151 {
+public class _151_PrintUniqueNumbers {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int size = scan.nextInt();

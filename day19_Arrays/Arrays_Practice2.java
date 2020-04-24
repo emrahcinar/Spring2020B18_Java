@@ -31,11 +31,13 @@ public class Arrays_Practice2 {
         Scanner scan = new Scanner(System.in);
 
         String[] student = new String[10];
-        //Write a program that aska "enter a name" 10 times, and store each of the names in the array students
+        //Write a program that aska "enter a name" 10 times,
+        // and store each of the names in the array students
         for (int i = 0; i <= student.length - 1; i++) {
-            System.out.println("Enter name");
+            System.out.println(i+" -Enter name");
             student[i] = scan.next();
         }
+
         System.out.println("List of student: ");
         for (int i = 0; i <= student.length - 1; i++) {
             System.out.println((i + 1) + "." + student[i]);

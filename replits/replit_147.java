@@ -9,7 +9,7 @@ the method creates a new array bigger by one then (int[] r).
 It populates the new array with the old ones(r) values.
 and finally in the last position adds the number (int n) to it.
  */
-public class replit {
+public class replit_147 {
     public static void add_to_r(int[] r, int n) {
         //create new array with one more position.
 

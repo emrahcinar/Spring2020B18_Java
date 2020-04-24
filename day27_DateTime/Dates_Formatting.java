@@ -1,5 +1,10 @@
 package day27_DateTime;
-
+/*
+ year: yy (2 digit year) , yyyy (4 digits year)
+ Month: MM(2 digit month), MMM (three letters), MMMM (full name of month)
+ day : dd(2 digit day)
+ day name: E or EE or EEE ( 3 letters of name of day) , EEEE (Full name of day)
+ */
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
