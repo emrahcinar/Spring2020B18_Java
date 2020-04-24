@@ -24,13 +24,18 @@ Hastanın tansiyonu 15-18 arasındayken ateşi 35.5-36.5 arasındaysa %5 azaltı
 public class Kan_Sekeri_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int kanSekeri = 0;
 
-        double ates = 0;
+
         int insulin = 0;
 
+        System.out.println("+++++++++++++++++++++++++++++++++++++++");
         System.out.print("Kan sekeri:");
-        kanSekeri = Integer.parseInt(sc.nextLine());
+        int kanSekeri = sc.nextInt();
+        System.out.println("Tansiyonu giriniz..");
+        double tansiyon = sc.nextDouble();
+        System.out.println("Atesi giriniz..");
+        double ates = sc.nextDouble();
+
         if (kanSekeri > 131 && kanSekeri < 150) {
             insulin = 100;
         } else if (kanSekeri > 151 && kanSekeri < 200) {
@@ -40,47 +45,45 @@ public class Kan_Sekeri_2 {
         } else {
             System.out.println("Acil hastaneye gidilmeli");
         }
-        System.out.println("Tansiyonu giriniz..");
-        String maden = sc.next();
-        double tansiyon = 0;
-        if (tansiyon < 13) {
-            if (ates > 35.5 && ates < 36) {
-                System.out.println(insulin);
+
+        if (tansiyon <= 13.0) {
+            if (ates > 35.5 && ates < 36.0) {
+                insulin *= 1;
             }
-            if (ates > 36.1 && ates < 37) {
-                System.out.println(insulin * 0.1);
+            if (ates > 36.1 && ates < 37.0) {
+                insulin *= 0.9;
             }
             if (ates > 37.1 && ates < 38) {
-                System.out.println(insulin * 0.15);
+                insulin *= 0.85;
             }
-            if (ates > 38) {
+            if (ates > 38.0) {
                 System.out.println("Acil hastaneye gidilmeli");
             }
         }
-        if (tansiyon < 13 && tansiyon > 15) {
+
+        if (tansiyon > 13.0 && tansiyon <= 15.0) {
             if (ates > 35.5 && ates < 37) {
-                System.out.println(insulin * 0.1);
+                insulin *= 1.1;
             }
             if (ates > 37.1 && ates < 39) {
-                System.out.println(insulin * 0.2);
+                insulin *= 1.2;
             }
             if (ates > 39) {
                 System.out.println("Acil hastaneye gidilmeli");
             }
         }
 
-
-        if (tansiyon < 15 && tansiyon > 18) {
+        if (tansiyon > 15.0 && tansiyon < 18.0) {
             if (ates > 35.5 && ates < 36.5) {
-                System.out.println(insulin / 0.05);
+                insulin *= 0.95;
             }
             if (ates > 36.6 && ates < 38) {
-                System.out.println(insulin / 0.1);
+                insulin *= 0.90;
             }
             if (ates > 38.1) {
                 System.out.println("Acil hastaneye gidilmeli");
             }
         }
-
+        System.out.println("Insulin miktari: " + insulin);
     }
 }
