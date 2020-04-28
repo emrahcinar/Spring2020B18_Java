@@ -91,17 +91,14 @@ public class Kuyumcu {
             fiyat=agirlik*3.5;
         }else if (maden.equalsIgnoreCase("platin")){
             fiyat=agirlik*170.71;
-        }else{
-            System.out.println("Hatali bir giris yaptiniz.");
-            System.exit(0);
         }
 
         System.out.println("Cisim= " + cisim );
         System.out.println("Hacim= " + hacim + "cm3");
         System.out.println("Maden= " + maden);
         System.out.println("Ozgul Agirlik= "+ozgulAgirlik+" gr/cm3");
-        System.out.println("Agirlik=" + agirlik+" gr");
-        System.out.println("Fiyat+ "+fiyat+" TL");
+        System.out.println("Agirlik= " + agirlik+" gr");
+        System.out.println("Fiyat= "+fiyat+" TL");
 
     }
 }

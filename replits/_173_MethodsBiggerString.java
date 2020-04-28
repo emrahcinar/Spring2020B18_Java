@@ -4,10 +4,10 @@ package replits;
  the method gets two strings and return the longest one
  biggerS("apple","orange") ==> "orange"
  */
-public class _173_ {
+public class _173_MethodsBiggerString {
     public static void main(String[] args) {
-        System.out.println(biggerS("selcuk","istanbul"));
 
+        System.out.println(biggerS("izmir","istanbul"));
 
     }
 

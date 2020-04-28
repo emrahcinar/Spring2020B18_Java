@@ -5,8 +5,9 @@ for example:
 removeFirst("aaa")
 returns "aa"
  */
-public class _174_ {
+public class _174_Methodremovefirstchar {
     public static void main(String[] args) {
+
         System.out.println(removeFirst("selcuk"));
     }
     public static String removeFirst(String target) {

@@ -1,4 +1,138 @@
 package SelfZz;
 
+import java.util.Scanner;
+
+/*
+Bir hasta, kendi ölçtüğü, ateş, tansiyon ve kan şekeri değerlerine göre insülin almaktadır.
+ Bu değerleri girerek alması gereken insülin miktarını hesaplayacak bir programa ihtiyacı vardır.
+ Program adım adım geliştirilecek. Her adım için hesaplama kuralları ise şöyledir.
+  Her adım ayrı bir program olarak yapılacak.
+1. Soru: Hastanın kan şekeri 131-150 aralığında ise 100mg, 151-200 aralığında ise 140mg,
+201-300 aralığında ise 175mg, 301 ve üzeri ise hasta acilen hastaneye gitmelidir.
+2. Soru: Hastanın tansiyon ve ateş değerleri verilen baz şeker değerlerini şöyle etkilemektedir.
+Hastanın tansiyonu 13’ün altındaysa ve ateşi 35.5-36 arasındaysa değerler değişmemektedir.
+ Ateş, 36.1-37 aralığında ise insülin miktarı %10, 37.1-38 aralığındaysa %15 azaltılmalıdır.
+  38.1’in üstündeyse hasta haneye başvurmalıdır.
+Hastanın tansiyonu 13-15 arasındayken ateşi 35.5-37 arasındaysa %10 artırılmalı
+, 37.1-39 aralığındaysa %20 artmalı, 39.1 ve üzeri ateşi varsa hasta acilen hastaneye başvurmalıdır.
+Hastanın tansiyonu 15-18 arasındayken ateşi 35.5-36.5 arasındaysa %5 azaltılmalı,
+ 36.6-38 aralığındaysa %10 azaltılmalı, 38.1 ve üzeri ateşi varsa hasta acilen hastaneye başvurmalıdır.
+18 üzeri tansiyonda hasta hastaneye başvurmalıdır.
+
+
+ */
 public class Kan_Sekeri_3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+        int insulin = 0;
+
+        System.out.println("+++++++++++++++++++++++++++++++++++++++");
+        System.out.print("Kan sekeri:");
+        int kanSekeri = sc.nextInt();
+        System.out.println("Tansiyonu giriniz..");
+        double tansiyon = sc.nextDouble();
+        System.out.println("Atesi giriniz..");
+        double ates = sc.nextDouble();
+
+        System.out.println("Yaş..");
+        int yas = sc.nextInt();
+
+        if (kanSekeri > 131 && kanSekeri <=150) {
+            insulin = 100;
+        } else if (kanSekeri > 151 && kanSekeri <=200) {
+            insulin = 140;
+        } else if (kanSekeri > 201 && kanSekeri <=300) {
+            insulin = 175;
+        } else { //hastaneye gitme durumu
+            insulin = -1;
+        }
+
+        if (insulin==0) {
+            System.out.println("İnsulin almanıza gerek yoktur.");
+        }
+        else if (insulin==-1) {
+            System.out.println("Acil hastaneye gidilmeli.");
+        }
+        else { //insulin>0
+            double alt;
+            double orta ;
+            double ust;
+
+            if (yas<=20) {
+                alt=11.0;
+                orta =14.0;
+                ust=19.0;
+            }
+            else if (yas<=40) {
+                alt=13.0;
+                orta =15.0;
+                ust=18.0;
+            }
+            else if (yas<=60) {
+                alt=12.0;
+                orta =16.0;
+                ust=20.0;
+            }
+            else {
+                alt = 10.0;
+                orta = 14.0;
+                ust = 17.0;
+            }
+
+            if (tansiyon <=alt) {
+
+                if (ates > 35.5 && ates <=36.0) {
+                    insulin *= 1;
+                }
+
+                if (ates > 36 && ates <=37.0) {
+                    insulin *= 0.9;
+                }
+
+                if (ates > 37 && ates <=38) {
+                    insulin *= 0.85;
+                }
+                if (ates > 38.0) {
+                    insulin = -1;
+                }
+            }
+            else
+            if ( tansiyon <= orta) {
+
+                if (ates >= 35.5 && ates <=37) {
+                    insulin *= 1.1;
+                }
+                if (ates > 37 && ates <=39) {
+                    insulin *= 1.2;
+                }
+                if (ates > 39) {
+                    insulin = -1;
+                }
+            }
+            else
+            if ( tansiyon <=ust) {
+                if (ates > 35.5 && ates <=36.5) {
+                    insulin *= 0.95;
+                }
+                if (ates > 36.5 && ates <=38) {
+                    insulin *= 0.90;
+                }
+                if (ates > 38) {
+                    insulin = -1;
+
+                }
+            }
+
+            if (insulin==-1)
+                System.out.println("Acil hastaneye gidilmeli.");
+            else
+                System.out.println("Insulin:" + insulin);
+        }
+
+
+
+
+    }
 }

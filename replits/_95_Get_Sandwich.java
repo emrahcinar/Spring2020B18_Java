@@ -20,7 +20,7 @@ Example:
 input: breadbutterbread
 output: butter
  */
-public class _95_Get_Sndwich {
+public class _95_Get_Sandwich {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
