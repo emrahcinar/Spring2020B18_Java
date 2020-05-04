@@ -7,7 +7,7 @@ package day24_Methods.Warmup;
 
 
  */
-public class task3_04_16_2020 {
+public class Calculator {
     public static void main(String[] args) {
 Calculation(10,2,"/");
 

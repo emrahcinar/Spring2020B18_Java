@@ -34,11 +34,11 @@ public class MinMaxNumber {
 
         int[] arr = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
         MaxNumber(arr);//10
-        MinNumber(arr);
+        MinNumber(arr);//1
 
         int[] arr1 = {100, 90, 80, 70, 60, -50, -40, 3, 2, 1};
         MaxNumber(arr1);//10
-        MinNumber(arr1);
+        MinNumber(arr1);//-50
 
 Descending(arr1);
 

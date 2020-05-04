@@ -2,7 +2,7 @@ package day24_Methods.Warmup;
 
 import java.util.Scanner;
 
-public class task1_04_16_2020 {
+public class MilestoKm {
     public static void main(String[] args) {
         Scanner scan=new Scanner(System.in);
         System.out.println("Enter number for KM: ");

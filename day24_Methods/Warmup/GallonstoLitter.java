@@ -5,7 +5,7 @@ package day24_Methods.Warmup;
                    1 G = 3.75 L
 
  */
-public class task2_04_16_2020 {
+public class GallonstoLitter {
     public static void main(String[] args) {
 
 

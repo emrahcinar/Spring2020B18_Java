@@ -1,11 +1,11 @@
-package day24_Methods.Warmup;
+package day24_Methods;
 
 /*
   1. write a methods that can return the maximum number between two numbers
             Ex: Max(10, 20) ==> 20
 
  */
-public class task4_04_16_2020 {
+public class Method_Palindrom {
     public static void main(String[] args) {
         String word = "Cybertek";
         Max(word);
