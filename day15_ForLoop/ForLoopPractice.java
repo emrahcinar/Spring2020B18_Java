@@ -25,9 +25,9 @@ public class ForLoopPractice {
         for (int number=2 ; number <=100 ; number +=2) {
 
             resultEven += number + " ";
-            System.out.print(resultEven);
-        }
 
+        }
+        System.out.print(resultEven);
 
 
 
